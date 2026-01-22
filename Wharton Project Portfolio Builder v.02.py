@@ -797,7 +797,7 @@ def main():
     # Optimize
     sleeves, A = build_sleeve_matrix(tickers, sleeve_of)
     cons = sleeve_constraints(A, sleeves)
-    bounds = [(0.0, max_w) for _ in tickers]
+    bounds = [(0.0015, max_w) for _ in tickers]
     w0 = smart_initial_weights(tickers, sleeve_of, A, sleeves)
 
     print("\nOptimizing...")
